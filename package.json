@@ -1,0 +1,33 @@
+{
+  "name": "ng-onload",
+  "version": "0.0.1",
+  "description": "ngOnload directive for allowing callbacks from Angulars Scope to be executed on elements onload event.",
+  "main": "gulpfile.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mikaturunen/ng-onload.git"
+  },
+  "keywords": [
+    "ngonload",
+    "directive",
+    "angular",
+    "html5",
+    "onload"
+  ],
+  "author": "Mika Turunen <mika.turunen@ymail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mikaturunen/ng-onload/issues"
+  },
+  "homepage": "https://github.com/mikaturunen/ng-onload",
+  "devDependencies": {
+    "bower": "^1.3.12",
+    "gulp": "^3.8.11"
+  }
+}
