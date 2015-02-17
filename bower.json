@@ -1,0 +1,27 @@
+{
+  "name": "ngOnload",
+  "version": "0.0.1",
+  "description": "ngOnload directive for allowing callbacks from Angulars Scope to be executed on elements onload event.",
+  "authors": [
+    "Mika Turunen <mika.turunen@ymail.com>"
+  ],
+  "moduleType": [
+    "angular",
+    "onload",
+    "directive",
+    "html5"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "client/bower",
+    "tests"
+  ],
+  "dependencies": {
+  },
+  "devDependencies": {
+      "angular": "^1.3.9"
+  }
+}
