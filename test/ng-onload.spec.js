@@ -5,7 +5,7 @@
 
 // Declaring the stub application to inject our directive into
 angular
-    .module("test", [ "ngOnload" ])
+    .module("test", [ ])
     .controller("TestController", [
         "$scope",
         ($scope) => {
@@ -19,21 +19,19 @@ angular
 describe("Ng-onload", () => {
     var element;
     var scope;
+    var $compile;
 
-    beforeEach(() => {
-        module("test");
-    });
+    beforeEach(module("ngOnload"));
 
-    beforeEach(inject(($rootScope) => {
-        scope = $rootScope.$new();
-    }));
+    describe("Iframe", () => {
+        beforeEach(inject((_$compile_, _$rootScope_) => {
+            $compile = _$compile_;
+            scope = _$rootScope_.$new();
+        }));
 
-    it("Should trigger on iframe onload.", (done) => {
-
-        inject(function ($compile) {
-            element = angular.element("<div ng-app=\"test\" ng-controller=\"TestController\"> " +
-                "<iframe src=\"../test/index.test.html\" element-onload=\"done\"> </iframe> " +
-            "</div>");
+        it("Should trigger onload event.", (done) => {
+            element = angular
+                .element("<iframe src=\"../test/index.test.html\" element-onload=\"done)\"> </iframe>");
 
             element = $compile(element)(scope);
             scope.$digest();
