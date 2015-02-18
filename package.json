@@ -32,6 +32,7 @@
     "gulp": "^3.8.11",
     "gulp-6to5": "^3.0.0",
     "gulp-jshint": "^1.9.2",
+    "gulp-karma": "0.0.4",
     "gulp-rename": "^1.2.0",
     "gulp-uglify": "^1.1.0",
     "jasmine": "^2.2.1",

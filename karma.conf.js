@@ -24,7 +24,7 @@ module.exports = function(config) {
             "release/ng-onload.min.js",
 
             // Test files
-            "release/ng-onload.spec.min.js"
+            "release/ng-onload.spec.js"
         ],
 
         // list of files to exclude
@@ -60,6 +60,6 @@ module.exports = function(config) {
 
         // Continuous Integration mode
         // if true, Karma captures browsers, runs the tests and exits
-        singleRun: false
+        singleRun: true
     });
 };
