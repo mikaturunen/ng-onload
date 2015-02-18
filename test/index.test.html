@@ -1,0 +1,25 @@
+<!doctype html>
+
+    <head>
+        <meta charset="utf-8">
+        <script src="../bower_components/angular/angular.min.js"></script>
+        <script src="../release/ng-onload.min.js"></script>
+        <script>
+            // Declaring the stub application to inject our directive into
+            angular
+                .module("test", [ "ngOnload" ])
+                .controller("TestController", function($scope) {
+                    $scope.helloTest = function() {
+                        alert("Hello world!");
+                    };
+                });
+        </script>
+    </head>
+    <body>
+        <pre>Super simple test file.</pre>
+
+        <div ng-app="test" ng-controller="TestController">
+            <iframe src="index.test.html" element-onload="helloTest()"></iframe>
+        </div>
+    </body>
+</html>
