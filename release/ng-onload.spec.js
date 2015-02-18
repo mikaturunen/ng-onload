@@ -25,7 +25,7 @@ describe("Ng-onload", function () {
         }));
 
         it("Should trigger onload event.", function (done) {
-            element = angular.element("<iframe src=\"../test/index.test.html\" element-onload=\"alert()\"> </iframe>");
+            element = angular.element("<iframe src=\"../test/index.test.html\" ng-onload=\"done)\"> </iframe>");
 
             element = $compile(element)(scope);
             scope.$digest();
