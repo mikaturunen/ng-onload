@@ -14,6 +14,14 @@ gulp.task("es6to5", function() {
         .pipe(gulp.dest( "./release" ));
 });
 
+gulp.task("test", function() {
+    return gulp.src([ "./test/ng-onload.spec.js" ])
+        .pipe(to5())
+        .pipe(uglify())
+        .pipe(rename("ng-onload.spec.min.js"))
+        .pipe(gulp.dest( "./release" ));
+});
+
 gulp.task("jslint", function() {
     return gulp.src([ "test/**/*.js", "lib/**/*.js" ])
         .pipe(jshint())
@@ -23,6 +31,6 @@ gulp.task("jslint", function() {
 
 gulp.task("default", function() {
     sequence(
-        [ "jslint", "es6to5" ]
+        [ "jslint", "es6to5", "test" ]
     );
 });
