@@ -9,14 +9,9 @@ var rename = require("gulp-rename");
 gulp.task("es6to5", function() {
     return gulp.src([ "./lib/*.js" ])
         .pipe(to5())
+        .pipe(uglify())
+        .pipe(rename("ng-onload.min.js"))
         .pipe(gulp.dest( "./release" ));
-});
-
-gulp.task("uglify", function() {
-   gulp.src([ "./release/*.js" ])
-       .pipe(uglify())
-       .pipe(rename("ng-onload.min.js"))
-       .pipe(gulp.dest( "./release/" ));
 });
 
 gulp.task("jslint", function() {
@@ -28,7 +23,6 @@ gulp.task("jslint", function() {
 
 gulp.task("default", function() {
     sequence(
-        [ "jslint", "es6to5" ],
-        "uglify"
+        [ "jslint", "es6to5" ]
     );
 });
