@@ -1,7 +1,9 @@
 "use strict";
 
-/* global console, angular, module, describe, it, inject, beforeEach, element, scope */
+/* global console, angular, module, describe, it, inject, beforeEach, scope */
 /* jshint esnext: true, node: true */
+// Targetting especially 'element' until I fix it. This is stupid, I know.
+/* jshint -W117 */
 
 describe("ng-onload", () => {
 
