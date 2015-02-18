@@ -19,9 +19,9 @@
     "client/bower",
     "tests"
   ],
-  "dependencies": {
-  },
+  "dependencies": {},
   "devDependencies": {
-      "angular": "^1.3.9"
+    "angular": "^1.3.9",
+    "angular-mocks": "~1.3.13"
   }
 }
