@@ -4,17 +4,19 @@ var stylish = require("jshint-stylish");
 var uglify = require("gulp-uglify");
 var jshint = require("gulp-jshint");
 var to5 = require("gulp-6to5");
+var rename = require("gulp-rename");
 
 gulp.task("es6to5", function() {
     return gulp.src([ "./lib/*.js" ])
         .pipe(to5())
-        .pipe(gulp.dest(path.join(releaseLocationServer)));
+        .pipe(gulp.dest( "./release" ));
 });
 
 gulp.task("uglify", function() {
-   gulp.src([ "./release/*.js") ])
+   gulp.src([ "./release/*.js" ])
        .pipe(uglify())
-       .pipe(gulp.dest( "./release.min.js" ));
+       .pipe(rename("ng-onload.min.js"))
+       .pipe(gulp.dest( "./release/" ));
 });
 
 gulp.task("jslint", function() {
@@ -26,7 +28,7 @@ gulp.task("jslint", function() {
 
 gulp.task("default", function() {
     sequence(
-        [ "jsling", "es6to5" ],
+        [ "jslint", "es6to5" ],
         "uglify"
     );
 });
