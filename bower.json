@@ -5,6 +5,11 @@
   "authors": [
     "Mika Turunen <mika.turunen@ymail.com>"
   ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/mikaturunen/ng-onload.git"
+  },
+  "main": "release/ng-onload.min.js",
   "moduleType": [
     "angular",
     "onload",
@@ -17,7 +22,10 @@
     "node_modules",
     "bower_components",
     "client/bower",
-    "tests"
+    "lib",
+    "tests",
+    "test",
+    "gulpfile.js"
   ],
   "dependencies": {},
   "devDependencies": {
