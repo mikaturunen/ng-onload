@@ -5,7 +5,6 @@ var uglify = require("gulp-uglify");
 var jshint = require("gulp-jshint");
 var to5 = require("gulp-6to5");
 var rename = require("gulp-rename");
-var karma = require('karma').server;
 
 gulp.task("es6to5", function() {
     return gulp.src([ "./lib/*.js" ])
@@ -13,19 +12,6 @@ gulp.task("es6to5", function() {
         .pipe(uglify())
         .pipe(rename("ng-onload.min.js"))
         .pipe(gulp.dest( "./release" ));
-});
-
-gulp.task("test", function() {
-    return gulp.src([ "./test/ng-onload.spec.js" ])
-        .pipe(to5())
-        .pipe(gulp.dest( "./release" ));
-});
-
-gulp.task("karma", function (done) {
-    karma.start({
-        configFile: __dirname + "/karma.conf.js",
-        singleRun: true
-    }, done);
 });
 
 gulp.task("jslint", function() {
@@ -37,7 +23,6 @@ gulp.task("jslint", function() {
 
 gulp.task("default", function() {
     sequence(
-        [ "jslint", "es6to5", "test" ],
-        "karma"
+        [ "jslint", "es6to5" ]
     );
 });
