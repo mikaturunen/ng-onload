@@ -65,3 +65,5 @@ index.html:
 You can find and example .html and how it's used inside the /test directory. There currently are no specific unit tests available but feel free to contribute.
 
 Please note that the code is written in ES6 JavaScript which is then compiled to ES5 compatible JavaScript and the compiled + uglified result can be found from /release/ng-onload.min.js.
+
+This small angular directive started from my old GIST: https://gist.github.com/mikaturunen/f0b45def06bc83ccea9e
