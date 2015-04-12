@@ -1,6 +1,6 @@
 {
-  "name": "ngOnload",
-  "version": "0.0.1",
+  "name": "ng-onload",
+  "version": "0.0.2",
   "description": "ngOnload directive for allowing callbacks from Angulars Scope to be executed on elements onload event.",
   "authors": [
     "Mika Turunen <mika.turunen@ymail.com>"
