@@ -37,7 +37,9 @@ application.js:
         // This is the scope callback we are going to call when the elements
         // onload event triggers
 
-        $scope.hello = function() {
+        $scope.hello = function(contentLocation) {
+            // contentLocation === iframe.contentWindow.location
+            // it's undefined when contentWindow cannot be found from the bound element
             alert("Hello world!");
         };
     });
