@@ -56,7 +56,7 @@ index.html:
         </head>
         <body>
             <div ng-app="magicalRocketUnicornApplication" ng-controller="UnicornController">
-                <iframe src="http://some.location.com/somewhere" ng-onload="hello()"></iframe>
+                <iframe src="http://some.location.com/somewhere" ng-onload="hello"></iframe>
             </div>
         </body>
     </html>
