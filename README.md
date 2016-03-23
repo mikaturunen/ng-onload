@@ -1,9 +1,9 @@
 # ng-onload
 Binds Angular.js scope function to given HTML elements onload event; for example, iframe.
 
-There is no direct way of binding angular to elements onload event as commonly the HTML elements onload="" attribute looks into the JavaScripts global name space (window.*) which is a big no-no. It used to be the norm back in the day of how to do things but with modern frameworks like AngularJs and the such the approach has changed a lot.
+There is no direct way of binding angular to elements onload event as commonly the HTML elements `onload=""` attribute looks into the JavaScripts global name space (window.*) which is a big no-no. It used to be the norm back in the day of how to do things but with modern frameworks like AngularJs and the such the approach has changed a lot.
 
-This is just one example (and by no means the only way) of how to get Angular behave nicely with HTML elements onload event. As < iframe onload="test()"> looks into window.test for a callback we need to bound the onload event to look into provided angular scope for the callback.
+This is just one example (and by no means the only way) of how to get Angular behave nicely with HTML elements onload event. As `<iframe onload="test()">` looks into window.test for a callback we need to bound the onload event to look into provided angular scope for the callback.
 
 </br>
 
