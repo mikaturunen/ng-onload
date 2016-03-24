@@ -30,19 +30,18 @@ A longer example with some other Angular content included that you'll normally h
 application.js:
 
     // Creating magical Angular application to solve problem X
-    var app = angular.module("magicalRocketUnicornApplication", [ "ngOnload" ]);
+    angular
+        .module("magicalRocketUnicornApplication", [ "ngOnload" ])
+        .controller("UnicornController", function($scope) {
+            // This is the scope callback we are going to call when the elements
+            // onload event triggers
 
-    // Adding some additional controllers to the application
-    app.controller("UnicornController", function($scope) {
-        // This is the scope callback we are going to call when the elements
-        // onload event triggers
-
-        $scope.hello = function(contentLocation) {
-            // contentLocation === iframe.contentWindow.location
-            // it's undefined when contentWindow cannot be found from the bound element
-            alert("Hello world!");
-        };
-    });
+            $scope.hello = function(contentLocation) {
+                // contentLocation === iframe.contentWindow.location
+                // it's undefined when contentWindow cannot be found from the bound element
+                alert("Hello world!");
+            };
+        });
 
 
 index.html:
