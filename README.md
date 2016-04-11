@@ -20,7 +20,7 @@ Super short version of how to use the ng-load directive in your Angular applicat
     angular.module("magicalRocketUnicornApplication", [ "ngOnload" ])
 
     // After that it's ready to rock - Usage in HTML
-    <iframe src="www.foobar.com" ng-onload="callbackFromScope"></iframe>
+    <iframe src="www.foobar.com" ng-onload="callbackFromScope()"></iframe>
 
 </br>
 
@@ -55,7 +55,7 @@ index.html:
         </head>
         <body>
             <div ng-app="magicalRocketUnicornApplication" ng-controller="UnicornController">
-                <iframe src="http://some.location.com/somewhere" ng-onload="hello"></iframe>
+                <iframe src="http://some.location.com/somewhere" ng-onload="hello()"></iframe>
             </div>
         </body>
     </html>
