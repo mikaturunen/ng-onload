@@ -10,7 +10,7 @@
                 .module("test", [ "ngOnload" ])
                 .controller("TestController", function($scope) {
                     $scope.helloTest = function(contentLocation) {
-                        console.log("Hello world!", location);
+                        console.log("Hello world!", contentLocation);
                     };
                 });
         </script>
@@ -19,7 +19,7 @@
         <pre>Super simple test file.</pre>
 
         <div ng-app="test" ng-controller="TestController">
-            <iframe src="index.test.html" ng-onload="helloTest()"></iframe>
+            <iframe src="index.test.html" ng-onload="helloTest(contentLocation)"></iframe>
         </div>
     </body>
 </html>
