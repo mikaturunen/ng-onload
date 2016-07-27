@@ -55,7 +55,8 @@ index.html:
         </head>
         <body>
             <div ng-app="magicalRocketUnicornApplication" ng-controller="UnicornController">
-                <iframe src="http://some.location.com/somewhere" ng-onload="hello()"></iframe>
+				<!-- Notice the use of 'contentLocation' if you want to use the named parameters to get location property -->
+                <iframe src="http://some.location.com/somewhere" ng-onload="hello(contentLocation)"></iframe>
             </div>
         </body>
     </html>
