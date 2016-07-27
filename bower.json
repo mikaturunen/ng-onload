@@ -9,7 +9,7 @@
     "type": "git",
     "url": "git://github.com/mikaturunen/ng-onload.git"
   },
-  "main": "release/ng-onload.min.js",
+  "main": "lib/ng-onload.js",
   "moduleType": [
     "angular",
     "onload",
