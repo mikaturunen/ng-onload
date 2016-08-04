@@ -69,3 +69,11 @@ You can find and example .html and how it's used inside the /test directory. The
 Please note that the code is written in ES6 JavaScript which is then compiled to ES5 compatible JavaScript and the compiled + uglified result can be found from /release/ng-onload.min.js.
 
 This small angular directive started from my old GIST: https://gist.github.com/mikaturunen/f0b45def06bc83ccea9e
+
+## FAQ
+
+#### 1
+
+Q. iframe location does not work! It's undefined!
+
+A. It does. It has been fixed and it explicitly takes advante of `named properties` and that's some dark magic right there. Look at the `test/index.test.html` to see it in action. 
