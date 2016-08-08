@@ -20,7 +20,8 @@ Super short version of how to use the ng-load directive in your Angular applicat
     angular.module("magicalRocketUnicornApplication", [ "ngOnload" ])
 
     // After that it's ready to rock - Usage in HTML
-    <iframe src="www.foobar.com" ng-onload="callbackFromScope()"></iframe>
+    // Please note the use of 'contentLocation' variables, it's a named property and this way it provides the 'location' of the IFrame to the callback
+    <iframe src="www.foobar.com" ng-onload="callbackFromScope(contentLocation)"></iframe>
 
 </br>
 
