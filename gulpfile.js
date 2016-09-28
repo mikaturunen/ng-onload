@@ -9,6 +9,12 @@ var rename = require("gulp-rename");
 gulp.task("es6to5", function() {
     return gulp.src([ "./lib/*.js" ])
         .pipe(to5())
+        .pipe(rename("ng-onload.min.js"))
+        .pipe(gulp.dest( "./release" ));
+});
+
+gulp.task("release", ['es6to5'], function() {
+    return gulp.src([ "./release/*.js" ])
         .pipe(uglify())
         .pipe(rename("ng-onload.min.js"))
         .pipe(gulp.dest( "./release" ));
@@ -23,6 +29,6 @@ gulp.task("jslint", function() {
 
 gulp.task("default", function() {
     sequence(
-        [ "jslint", "es6to5" ]
+        [ "jslint", "release" ]
     );
 });
