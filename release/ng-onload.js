@@ -18,29 +18,25 @@
  * Example usage (HTML):
  *      <iframe src="www.google.com" ng-onload="angularScopeCallback()"></iframe>
  */
-const elementOnloadDirective = () => {
+var elementOnloadDirective = function () {
     return {
         restrict: "A",
         scope: {
             callback: "&ngOnload"
         },
-        link: (scope, element, attrs) => {
+        link: function (scope, element, attrs) {
             // hooking up the onload event - calling the callback on load event
-            element.one("load", _ => {
-				const contentLocation = element.length > 0 && element[0].contentWindow ?
-					element[0].contentWindow.location :
-					undefined;
+            element.one("load", function (_) {
+                var contentLocation = element.length > 0 && element[0].contentWindow ? element[0].contentWindow.location : undefined;
 
-				scope.callback({
-                	contentLocation
-            	});
-			});
+                scope.callback({
+                    contentLocation: contentLocation
+                });
+            });
         }
     };
 };
-elementOnloadDirective.$inject = [ ];
+elementOnloadDirective.$inject = [];
 elementOnloadDirective.directiveName = "ngOnload";
 
-angular
-    .module("ngOnload", [])
-    .directive(elementOnloadDirective.directiveName, elementOnloadDirective);
+angular.module("ngOnload", []).directive(elementOnloadDirective.directiveName, elementOnloadDirective);
