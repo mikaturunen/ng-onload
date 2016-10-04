@@ -77,4 +77,4 @@ This small angular directive started from my old GIST: https://gist.github.com/m
 
 Q. iframe location does not work! It's undefined!
 
-A. It does. It has been fixed and it explicitly takes advante of `named properties` and that's some dark magic right there. Look at the `test/index.test.html` to see it in action. 
+A. It does. It has been fixed and it explicitly takes advantage of `named properties` and that's some dark magic right there. Look at the `test/index.test.html` to see it in action. 
