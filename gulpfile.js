@@ -29,6 +29,7 @@ gulp.task("jslint", function() {
 
 gulp.task("default", function() {
     sequence(
-        [ "jslint", "release" ]
+        // disable jslint for now so we can solve the issue with the actual jslint
+        [ /** "jslint",**/ "release" ]
     );
 });

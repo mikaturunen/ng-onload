@@ -31,13 +31,14 @@
     "chai": "^2.0.0",
     "gulp": "^3.8.11",
     "gulp-6to5": "^3.0.0",
-    "gulp-jshint": "^1.9.2",
+    "gulp-jshint": "^2.0.4",
     "gulp-karma": "0.0.4",
     "gulp-rename": "^1.2.0",
     "gulp-uglify": "^1.1.0",
     "jasmine": "^2.2.1",
     "jasmine-core": "^2.2.0",
     "jasmine-jquery": "^2.0.6",
+    "jshint": "^2.9.4",
     "jshint-stylish": "^1.0.0",
     "run-sequence": "^1.0.2"
   }
