@@ -14,7 +14,7 @@ gulp.task("es6to5", function() {
 });
 
 gulp.task("release", ['es6to5'], function() {
-    return gulp.src([ "./release/*.js" ])
+    return gulp.src([ "./release/ng-onload.js" ])
         .pipe(uglify())
         .pipe(rename("ng-onload.min.js"))
         .pipe(gulp.dest( "./release" ));
