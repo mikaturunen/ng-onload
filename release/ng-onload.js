@@ -32,8 +32,8 @@
                 element.one("load", function (_) {
                     var contentLocation = element.length > 0 && element[0].contentWindow ? element[0].contentWindow.location : undefined;
 
-                    scope.callback({
-                        contentLocation: contentLocation
+                    scope.$applyAsync(function () {
+                        return scope.callback({ contentLocation: contentLocation });
                     });
                 });
             }
