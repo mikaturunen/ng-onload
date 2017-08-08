@@ -21,13 +21,14 @@
      * Example usage (HTML):
      *      <iframe src="www.google.com" ng-onload="angularScopeCallback()"></iframe>
      */
-    var elementOnloadDirective = function () {
+
+    var elementOnloadDirective = function elementOnloadDirective() {
         return {
             restrict: "A",
             scope: {
                 callback: "&ngOnload"
             },
-            link: function (scope, element, attrs) {
+            link: function link(scope, element, attrs) {
                 // hooking up the onload event - calling the callback on load event
                 element.one("load", function (_) {
                     var contentLocation = element.length > 0 && element[0].contentWindow ? element[0].contentWindow.location : undefined;
