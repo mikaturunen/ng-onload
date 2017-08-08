@@ -69,11 +69,10 @@ index.html:
 
 Prerequisites:
 * Have yarn installed globally (`npm i -g yarn`)
-* Have gulp cli tools installed (`npm i -g gulp-cli`)
 
 ```bash
-$ yarn install # install dependencies
-$ gulp         # builds the release and makes sure everything is good
+$ yarn install    # install dependencies
+$ npm run build   # builds the release and makes sure everything is good
 ```
 
 ## Other
