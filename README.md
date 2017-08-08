@@ -1,4 +1,5 @@
 # ng-onload
+
 Binds Angular.js scope function to given HTML elements onload event; for example, iframe.
 
 There is no direct way of binding angular to elements onload event as commonly the HTML elements `onload=""` attribute looks into the JavaScripts global name space (window.*) which is a big no-no. It used to be the norm back in the day of how to do things but with modern frameworks like AngularJs and the such the approach has changed a lot.
@@ -63,6 +64,17 @@ index.html:
     </html>
 
 </br>
+
+## Developing
+
+Prerequisites:
+* Have yarn installed globally (`npm i -g yarn`)
+* Have gulp cli tools installed (`npm i -g gulp-cli`)
+
+```bash
+$ yarn install # install dependencies
+$ gulp         # builds the release and makes sure everything is good
+```
 
 ## Other
 You can find and example .html and how it's used inside the /test directory. There currently are no specific unit tests available but feel free to contribute.
