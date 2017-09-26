@@ -30,7 +30,7 @@
             },
             link: function link(scope, element, attrs) {
                 // hooking up the onload event - calling the callback on load event
-                element.one("load", function (_) {
+                element.on("load", function (_) {
                     var contentLocation = element.length > 0 && element[0].contentWindow ? element[0].contentWindow.location : undefined;
 
                     scope.callback({
